@@ -20,6 +20,10 @@ var recargo_ingresos = 0.05; // 5%
 //Recargo
 var recargo = 0;
 var recargo_total = 0;
+var recargo_conyuge = 0;
+var recargo_hijos = 0;
+var cargopropiedades = 0;
+var cargoingresos=0;
 
 //Precio final 
 var precio_final = 0;
@@ -33,7 +37,7 @@ do {
   var casado = prompt("¿Está casado actualmente?", "Si/No");
 
   //Comprobamos la edad del cónyuge, solamente si se está casado/a
-  if(casado.toUpperCase()=="SI"){
+  if(casado.toUpperCase()==="SI"){
     var edad_conyuge = parseInt(prompt("¿Que edad tiene su esposo/a?", "Ingrese solamente números"))
   };
 
@@ -41,9 +45,7 @@ do {
   //convirtiendo las edades ingresadas a números 
   var edad_numero = parseInt(edad)
   var edad_conyuge_numero = 0
-  */
 
-  /*
   //convirtiendo la edad del cónyuge si se esta casado/a
   if(casado.toUpperCase()== "SI"){
     edad_conyuge_numero = parseInt(edad_conyuge)
@@ -52,15 +54,17 @@ do {
   //He desactivado esta parte del código ya que he indicado a la variable que transforme el número ingresado en Entero de una vez
 
   var hijos = prompt("¿Tiene hijos o hijas?", "Si/No");
+  var cantidad_hijos=0;
 
   //Comprobamos la cantidad de hijos solamente si los tienen
   if(hijos.toUpperCase()=="Si"){
-    var cantidad_hijos = parseInt(prompt("¿Cuantos hijos o hijas tiene?", "Ingrese solamente números"))
+    cantidad_hijos = parseInt(prompt("¿Cuantos hijos o hijas tiene?", "Ingrese solamente números"))
   };
 
+  var cantidad_propiedades=0;
   var propiedades = prompt("¿Tiene propiedades?", "Si/No");
   if(propiedades.toUpperCase()=="Si"){
-    var cantidad_propiedades = parseInt(prompt("¿Cuantas propiedades tiene?", "Ingrese solamente números"))
+    cantidad_propiedades = parseInt(prompt("¿Cuantas propiedades tiene?", "Ingrese solamente números"))
   };
 
   var salario = parseInt(prompt("¿Cuanto es su salario mensual?"));
@@ -68,14 +72,10 @@ do {
   // 1. convierta la cantidad de hijos a numero
   //He indicado en la variable que ingresen un número entero para reutilizar la varibale en un futuro
 
-  //Aquí debe calcular el recargo total basado en las respuestas ingresadas
-
   //Aquí es donde debe de calcular los recargos y el valor final
-  //Ejemplo (Debe completar los condicionales): Recargo por edad del asegurado 
+  // 1. Recargo por edad del asegurado 
   if(edad>=18 && edad<25){
-    //Calculamos el recargo en base a la edad 
     recargo = precio_base * edad_18
-    //Sumamos todos los recargos que hemos obtenido
     recargo_total = recargo_total + recargo
   } else if(edad>=25 && edad<50){
     recargo=precio_base*edad_25
@@ -107,7 +107,7 @@ do {
 
 
 //4. Recargo basado en la cantidad de propiedades
- if(cantidad_propiedades>=1){
+ if(cantidad_propiedades>0){
   cargopropiedades=cantidad_propiedades*recargo_propiedades
   recargo_total=recargo_total+cargopropiedades
  };
@@ -125,7 +125,7 @@ do {
   alert ("El precio sera de: "+precio_final);
 
 
-  let seguir=prompt("¿Desea seguir con  el programa? En caso que no desee seguir con el programa escriba Salir", "Si/Salir")
+  var seguir=prompt("¿Desea seguir con  el programa? En caso que no desee seguir con el programa escriba Salir", "Si/Salir")
   //Seguir con la calculadora
-} while (seguir.toUpperCase()=="Si");
+} while (seguir.toUpperCase()==="Si");
 
