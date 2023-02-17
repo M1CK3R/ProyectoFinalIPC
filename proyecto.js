@@ -125,7 +125,7 @@ do {
   alert ("El precio sera de: "+precio_final);
 
 
-  seguir=prompt("¿Desea seguir con  el programa? En caso que no desee seguir con el programa escriba Salir", "Si/Salir")
+  var seguir=prompt("¿Desea seguir con  el programa? En caso que no desee seguir con el programa escriba Salir", "Si/Salir")
   //Seguir con la calculadora
 } while (seguir.toUpperCase()=="Si")
 
