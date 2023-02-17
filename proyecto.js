@@ -24,8 +24,7 @@ var recargo_total = 0;
 //Precio final 
 var precio_final = 0;
 
-var seguir = "Si";
-while (seguir.toUpperCase()=="Si") {
+do {
   
   //Mensajes de alerta para ingresar datos 
   var nombre = prompt("Ingrese su nombre, por favor");
@@ -128,5 +127,5 @@ while (seguir.toUpperCase()=="Si") {
 
   seguir=prompt("¿Desea seguir con  el programa? En caso que no desee seguir con el programa escriba Salir", "Si/Salir")
   //Seguir con la calculadora
-}
+} while (seguir.toUpperCase()=="Si")
 
