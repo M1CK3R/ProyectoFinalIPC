@@ -68,7 +68,7 @@ do {
     cantidad_propiedades = parseInt(prompt("¿Cuantas propiedades tiene?", "Ingrese solamente números"))
   };
 
-  var ingresos = parseInt(prompt("¿Cuantos son sus ingresos mensuales?"));
+  var salario = parseInt(prompt("¿Cual es su salario mensual?"));
 
   // 1. convierta la cantidad de hijos a numero
   //He indicado en la variable que ingresen un número entero para reutilizar la varibale en un futuro
