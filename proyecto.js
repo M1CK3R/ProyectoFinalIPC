@@ -57,13 +57,14 @@ do {
   var cantidad_hijos=0;
 
   //Comprobamos la cantidad de hijos solamente si los tienen
-  if(hijos.toUpperCase()=="Si"){
+
+  if(hijos.toUpperCase()=="SI"){
     cantidad_hijos = parseInt(prompt("¿Cuantos hijos o hijas tiene?", "Ingrese solamente números"))
   };
 
   var cantidad_propiedades=0;
   var propiedades = prompt("¿Tiene propiedades?", "Si/No");
-  if(propiedades.toUpperCase()=="Si"){
+  if(propiedades.toUpperCase()=="SI"){
     cantidad_propiedades = parseInt(prompt("¿Cuantas propiedades tiene?", "Ingrese solamente números"))
   };
 
@@ -127,5 +128,5 @@ do {
 
   var seguir=prompt("¿Desea seguir con  el programa? En caso que no desee seguir con el programa escriba Salir", "Si/Salir")
   //Seguir con la calculadora
-} while (seguir.toUpperCase()==="Si");
+} while (seguir.toUpperCase()==="SI");
 
