@@ -34,6 +34,7 @@ do {
   var nombre = prompt("Ingrese su nombre, por favor");
   var edad = parseInt(prompt("¿Cuantos años tiene?", "Ingrese solamente números"));
 
+  if(edad>=18){
   var casado = prompt("¿Está casado actualmente?", "Si/No");
 
   //Comprobamos la edad del cónyuge, solamente si se está casado/a
@@ -53,6 +54,7 @@ do {
   */ 
   //He desactivado esta parte del código ya que he indicado a la variable que transforme el número ingresado en Entero de una vez
 
+  //Pide indicar si es que el cleinte/asegurado tiene hij@s o no 
   var hijos = prompt("¿Tiene hijos o hijas?", "Si/No");
   var cantidad_hijos=0;
 
@@ -62,12 +64,16 @@ do {
     cantidad_hijos = parseInt(prompt("¿Cuantos hijos o hijas tiene?", "Ingrese solamente números"))
   };
 
+  //Pide indicar si es que el cliente/asegurado tiene propiedades o no
   var cantidad_propiedades=0;
   var propiedades = prompt("¿Tiene propiedades?", "Si/No");
+
+  //En caso que indique que si tiene se le pedirá indicar cuántas propiedades tiene
   if(propiedades.toUpperCase()=="SI"){
     cantidad_propiedades = parseInt(prompt("¿Cuantas propiedades tiene?", "Ingrese solamente números"))
   };
 
+  //Pide indicar cúal es su salario mensual
   var salario = parseInt(prompt("¿Cual es su salario mensual?"));
 
   // 1. convierta la cantidad de hijos a numero
@@ -125,6 +131,9 @@ do {
   alert ("El recargo total sera de: "+recargo_total);
   alert ("El precio sera de: "+precio_final);
 
+} else{
+  alert("Usted es menor de edad y no podemos tomar su caso")
+}
 
   var seguir=prompt("¿Desea seguir con  el programa? En caso que no desee seguir con el programa escriba Salir", "Si/Salir")
   //Seguir con la calculadora
