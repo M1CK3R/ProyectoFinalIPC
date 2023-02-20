@@ -1,6 +1,6 @@
 # Proyecto Final Introducción a la programación de computadoras
 
-*Funcionamiento del programa*
+**Funcionamiento del programa**
 
 Este es una calculadora de cotizaciones para una empresa hecha con Javascript y HTML.
 
@@ -14,7 +14,7 @@ Al finalizar la cotización se le pedirá que indique si es que desea continuar 
 
 Una vez que termine con las cotizaciones se le mostrará un mensaje de despedida y podrá cerrar la pagina en la que esta hecha la calculadora.
 
-*Partes a considerar*
+**Partes a considerar**
 
 Los recargos estan predefinidos, por lo que se tendrán que modificar en el código fuente si es que se quieren modificar estos.
 
@@ -30,7 +30,7 @@ Los recargos basados en el salario del cliente/asegurado son los siguientes:
 - Salario mensual
 
 
-*¿Qué se podría mejorar en el programa?*
+**¿Qué se podría mejorar en el programa?**
 
 - Ya que el programa es una calculadora de cotizaciones debería de poder hacer cotizaciones de más tipos.
 - Debría de dar la opción de poder cambiar los valores de las cotizaciones de una forma más facíl en caso que el usuario se vea en la necesidad de cambiarlos.
